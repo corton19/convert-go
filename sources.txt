@@ -7,3 +7,7 @@ https://www.geeksforgeeks.org/slices-in-golang/
 https://towardsdatascience.com/stop-using-csvs-for-storage-this-file-format-is-faster-and-lighter-8fec7ebad6fc
 https://learn.microsoft.com/en-us/azure/data-factory/format-orc
 ---
+
+2nd iteration:
+[LIBRARY] https://pkg.go.dev/github.com/scritchley/orc 
+https://stackoverflow.com/questions/57384901/how-to-read-orc-file-metadata
