@@ -4,3 +4,6 @@ https://gobyexample.com/writing-files
 https://stackoverflow.com/questions/48349927/how-to-write-a-directory-with-a-file-in-golang
 https://webdamn.com/write-data-to-csv-file-using-golang/
 https://www.geeksforgeeks.org/slices-in-golang/
+https://towardsdatascience.com/stop-using-csvs-for-storage-this-file-format-is-faster-and-lighter-8fec7ebad6fc
+https://learn.microsoft.com/en-us/azure/data-factory/format-orc
+---
