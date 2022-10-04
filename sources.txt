@@ -1,0 +1,6 @@
+1st iteration:
+https://www.golangprograms.com/simple-function-with-return-value-in-golang.html
+https://gobyexample.com/writing-files
+https://stackoverflow.com/questions/48349927/how-to-write-a-directory-with-a-file-in-golang
+https://webdamn.com/write-data-to-csv-file-using-golang/
+https://www.geeksforgeeks.org/slices-in-golang/
