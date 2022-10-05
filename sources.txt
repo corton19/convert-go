@@ -12,3 +12,4 @@ https://learn.microsoft.com/en-us/azure/data-factory/format-orc
 [LIBRARY]     https://github.com/scritchley/orc
 [LIBRARY/DOC] https://pkg.go.dev/github.com/scritchley/orc 
 https://stackoverflow.com/questions/57384901/how-to-read-orc-file-metadata
+https://arrow.apache.org/docs/python/orc.html
