@@ -16,3 +16,4 @@ https://arrow.apache.org/docs/python/orc.html
 https://pyorc.readthedocs.io/en/stable/tutorial.html#reading
 https://pypi.org/project/pyorc/
 https://stackoverflow.com/questions/54482815/how-can-i-convert-local-orc-files-to-csv
+https://github.com/scritchley/orc/blob/06dddf1ad665db0f427c4a8eef303ca041eccdcc/writer_test.go
