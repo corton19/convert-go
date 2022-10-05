@@ -13,3 +13,6 @@ https://learn.microsoft.com/en-us/azure/data-factory/format-orc
 [LIBRARY/DOC] https://pkg.go.dev/github.com/scritchley/orc 
 https://stackoverflow.com/questions/57384901/how-to-read-orc-file-metadata
 https://arrow.apache.org/docs/python/orc.html
+https://pyorc.readthedocs.io/en/stable/tutorial.html#reading
+https://pypi.org/project/pyorc/
+https://stackoverflow.com/questions/54482815/how-can-i-convert-local-orc-files-to-csv
