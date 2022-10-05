@@ -17,3 +17,6 @@ https://pyorc.readthedocs.io/en/stable/tutorial.html#reading
 https://pypi.org/project/pyorc/
 https://stackoverflow.com/questions/54482815/how-can-i-convert-local-orc-files-to-csv
 https://github.com/scritchley/orc/blob/06dddf1ad665db0f427c4a8eef303ca041eccdcc/writer_test.go
+https://stackoverflow.com/questions/57482282/multi-dimensional-arrays-in-go
+https://www.geeksforgeeks.org/what-is-blank-identifierunderscore-in-golang/
+https://stackoverflow.com/questions/13449773/go-range-and-len-of-multidimensional-array
