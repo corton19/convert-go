@@ -15,7 +15,7 @@ func check(e error) {
 }
 
 func data() {
-	csvData := [][]string{
+	data_to_file := [][]string{
 		{"Name", "City", "Country", "Skills"},
 		{"Rose", "London", "U.K.", "C"},
 		{"Smith", "Austin", "U.S.", "Java"},
@@ -31,7 +31,7 @@ func data() {
 	defer recordFile.Close()
 
 	w := csv.NewWriter(recordFile)
-	err = w.WriteAll(csvData)
+	err = w.WriteAll(data_to_file)
 	check(err)
 
 	recordFile.Sync()
