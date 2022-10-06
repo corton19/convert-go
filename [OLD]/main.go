@@ -15,6 +15,7 @@ import (
 	"github.com/scritchley/orc"
 )
 
+// check error function
 func check(e error) {
 	if e != nil {
 		panic(e)
