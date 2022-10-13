@@ -12,6 +12,7 @@ package main
 import (
 	"fmt"
 	"os"
+	"reflect"
 
 	"github.com/scritchley/orc"
 )
@@ -22,22 +23,83 @@ func check(e error) {
 	}
 }
 
+// Converts any type of input to string
+func convert_to_string(s any) string {
+	obtype := reflect.TypeOf(s)
+	fmt.Println("obtype: ", obtype)
+	b := reflect.TypeOf(s).Elem().Name()
+	fmt.Println("a: ", b)
+	return b
+}
+
+// Input data
+func input(x int) ([]string, []int) {
+	ERROR_MSG := []string{"XXXX"}
+	ERROR_NUM := []int{0, 0, 0, 0}
+	if x > 0 && x <= 4 {
+		if x == 1 {
+			Name := []string{"Rose", "Smith", "William", "James", "Rolf"}
+			err := []int{0}
+			return Name, err
+		}
+		if x == 2 {
+			err := []string{"0"}
+			Age := []int{28, 24, 29, 31, 21}
+			return err, Age
+		}
+		if x == 3 {
+			Country := []string{"U.K.", "U.S.", "France", "Norway", "Denmark"}
+			err := []int{0}
+			return Country, err
+		}
+		if x == 4 {
+			Skills := []string{"C", "Java", "PHP", "Python", "C++"}
+			err := []int{0}
+			return Skills, err
+		}
+	}
+	return ERROR_MSG, ERROR_NUM
+}
+
+func test() {
+	Name, _ := input(1)
+	_, Age := input(2)
+	Country, _ := input(3)
+	Skills, _ := input(4)
+
+	var1 := "string1" + convert_to_string(Name)
+	fmt.Println("1-----")
+	var2 := "int1" + convert_to_string(Age)
+	fmt.Println("2-----")
+	var3 := "string3" + convert_to_string(Country)
+	fmt.Println("3-----")
+	var4 := "string4" + convert_to_string(Skills)
+	fmt.Println("4-----")
+
+	variables := var1 + var2 + var3 + var4
+	fmt.Println(variables)
+
+}
+
 func writer() {
 	// Data
-	Name := []string{"Rose", "Smith", "William", "James", "Rolf"}
-	Age := []int{28, 24, 29, 31, 21}
-	Country := []string{"U.K.", "U.S.", "France", "Norway", "Denmark"}
-	Skills := []string{"C", "Java", "PHP", "Python", "C++"}
+	Name, _ := input(1)
+	_, Age := input(2)
+	Country, _ := input(3)
+	Skills, _ := input(4)
 
-	// Creates .orc file
+	// Create .orc file
 	f, err := os.Create("employee.orc")
 	check(err)
 
 	// set ParseSchema to the following:
-	t_start := "struct<"
-	variables := "string1:string,int1:int,string3:string,string4:string"
-	t_end := ">"
-	schema, err := orc.ParseSchema(t_start + variables + t_end)
+	var1 := "Name:" + convert_to_string(Name) + ","
+	var2 := "Age:" + convert_to_string(Age) + ","
+	var3 := "Country:" + convert_to_string(Country) + ","
+	var4 := "Skills:" + convert_to_string(Skills)
+	variables := var1 + var2 + var3 + var4
+	//variables := "string1:string,int1:int,string3:string,string4:string"
+	schema, err := orc.ParseSchema("struct<" + variables + ">")
 	check(err)
 
 	w, err := orc.NewWriter(f, orc.SetSchema(schema))
@@ -55,5 +117,6 @@ func writer() {
 }
 
 func main() {
+	//test()
 	writer()
 }
