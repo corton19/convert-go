@@ -33,5 +33,8 @@ Age = np.array(Age)
 Country = np.array(Country)
 Skills = np.array(Skills)
 
+print("TO CSV:")
+df.to_csv("employee.csv")
+
 
 # %%
