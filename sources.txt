@@ -20,3 +20,12 @@ https://github.com/scritchley/orc/blob/06dddf1ad665db0f427c4a8eef303ca041eccdcc/
 https://stackoverflow.com/questions/57482282/multi-dimensional-arrays-in-go
 https://www.geeksforgeeks.org/what-is-blank-identifierunderscore-in-golang/
 https://stackoverflow.com/questions/13449773/go-range-and-len-of-multidimensional-array
+
+4th iteration:
+https://realpython.com/pandas-plot-python/#distributions-and-histograms
+https://www.digitalocean.com/community/tutorials/using-break-and-continue-statements-when-working-with-loops-in-go
+https://stackoverflow.com/questions/46105281/can-i-return-either-a-string-or-an-error-value-via-the-same-result
+https://stackoverflow.com/questions/65899214/how-do-i-print-variable-name-instead-of-the-value-assigned-to-the-variable
+https://stackoverflow.com/questions/31377433/getting-method-parameter-names/31377793#31377793
+https://stackoverflow.com/questions/36310538/identify-non-builtin-types-using-reflect/37292523#37292523 [IMPORTANT]
+https://gosamples.dev/print-type/
