@@ -61,26 +61,6 @@ func input(x int) ([]string, []int) {
 	return ERROR_MSG, ERROR_NUM
 }
 
-func test() {
-	Name, _ := input(1)
-	_, Age := input(2)
-	Country, _ := input(3)
-	Skills, _ := input(4)
-
-	var1 := "string1" + convert_to_string(Name)
-	fmt.Println("1-----")
-	var2 := "int1" + convert_to_string(Age)
-	fmt.Println("2-----")
-	var3 := "string3" + convert_to_string(Country)
-	fmt.Println("3-----")
-	var4 := "string4" + convert_to_string(Skills)
-	fmt.Println("4-----")
-
-	variables := var1 + var2 + var3 + var4
-	fmt.Println(variables)
-
-}
-
 func writer() {
 	// Data
 	Name, _ := input(1)
@@ -117,6 +97,5 @@ func writer() {
 }
 
 func main() {
-	//test()
 	writer()
 }

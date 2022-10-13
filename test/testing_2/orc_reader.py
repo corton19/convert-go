@@ -4,7 +4,9 @@
 import pandas as pd
 import pyorc
 import numpy as np
+import matplotlib.pyplot as plt
 
+#%%
 data = open('employee.orc','rb')
 reader= pyorc.Reader(data)
 columns = reader.schema.fields
@@ -33,8 +35,12 @@ Age = np.array(Age)
 Country = np.array(Country)
 Skills = np.array(Skills)
 
-print("TO CSV:")
-df.to_csv("employee.csv")
+# [EXAMPLES] for plotting purposes
+df.plot(x="name", y="age", kind="bar")
 
+# Convert to .csv
+print("Starting CSV conversion...")
+df.to_csv("employee.csv")
+print("Finished.")
 
 # %%
