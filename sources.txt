@@ -29,3 +29,4 @@ https://stackoverflow.com/questions/65899214/how-do-i-print-variable-name-instea
 https://stackoverflow.com/questions/31377433/getting-method-parameter-names/31377793#31377793
 https://stackoverflow.com/questions/36310538/identify-non-builtin-types-using-reflect/37292523#37292523 [IMPORTANT]
 https://gosamples.dev/print-type/
+https://freshman.tech/snippets/go/check-type-of-value/
