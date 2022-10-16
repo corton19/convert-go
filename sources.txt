@@ -33,3 +33,4 @@ https://gosamples.dev/print-type/
 5th iteration:
 https://freshman.tech/snippets/go/check-type-of-value/
 https://levelup.gitconnected.com/switch-statement-in-golang-explained-9cd3a85aa19d
+https://stackoverflow.com/questions/21070387/how-can-i-call-len-on-an-interface
