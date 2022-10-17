@@ -1,11 +1,5 @@
-// 2nd iteration: Convert data to orc
-// Input is assumed to be a 2D array of type string
-
-// TODO (for 3rd iteration)
-// Create a function which can determine array size of an unknown imported array
-// The code should be less hard-coded (i.e., improve nested for loop at 49-61)
-// Q: Is the array going to be 2D? Otherwise, edit/improve it
-//
+// 4th iteration: Converts data of any input to orc
+// Input can be of any type
 
 package main
 
