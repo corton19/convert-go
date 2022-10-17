@@ -109,6 +109,12 @@ func writeFile(filename string, s ...interface{}) {
 			case ([]int):
 				s[j] = a[j].([]int)[i]
 				fmt.Println("s[", j, "]: ", s[j]) // debug
+			case ([]float64):
+				s[j] = a[j].([]float64)[i]
+				fmt.Println("s[", j, "]: ", s[j]) // debug
+			case ([]int64):
+				s[j] = a[j].([]int64)[i]
+				fmt.Println("s[", j, "]: ", s[j]) // debug
 			}
 		}
 		err = w.Write(s...)
