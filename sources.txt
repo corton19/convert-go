@@ -21,7 +21,7 @@ https://stackoverflow.com/questions/57482282/multi-dimensional-arrays-in-go
 https://www.geeksforgeeks.org/what-is-blank-identifierunderscore-in-golang/
 https://stackoverflow.com/questions/13449773/go-range-and-len-of-multidimensional-array
 
-4th iteration:
+4th iteration + 5th iteration + 6th iteration:
 https://realpython.com/pandas-plot-python/#distributions-and-histograms
 https://www.digitalocean.com/community/tutorials/using-break-and-continue-statements-when-working-with-loops-in-go
 https://stackoverflow.com/questions/46105281/can-i-return-either-a-string-or-an-error-value-via-the-same-result
@@ -29,8 +29,7 @@ https://stackoverflow.com/questions/65899214/how-do-i-print-variable-name-instea
 https://stackoverflow.com/questions/31377433/getting-method-parameter-names/31377793#31377793
 https://stackoverflow.com/questions/36310538/identify-non-builtin-types-using-reflect/37292523#37292523 [IMPORTANT]
 https://gosamples.dev/print-type/
-
-5th iteration:
 https://freshman.tech/snippets/go/check-type-of-value/
 https://levelup.gitconnected.com/switch-statement-in-golang-explained-9cd3a85aa19d
 https://stackoverflow.com/questions/21070387/how-can-i-call-len-on-an-interface
+https://www.adaltas.com/en/2020/07/23/benchmark-study-of-different-file-format/
