@@ -30,6 +30,3 @@ Country = np.array(Country)
 ###
 # [EXAMPLES] for plotting purposes
 df.plot(x=columns[0], y=columns[1], kind="bar")
-
-
-# %%
