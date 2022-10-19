@@ -1,6 +1,5 @@
-# Reads ORC files
-# Used to test output of main.go
-#%%
+# Reads ORC files - Example file
+
 import pandas as pd
 import pyorc
 import numpy as np
@@ -9,9 +8,6 @@ import matplotlib.pyplot as plt
 data = open('test.orc','rb')
 reader= pyorc.Reader(data)
 columns = reader.schema.fields
-#print(f'fields: {columns}')
-# r in front of string: Tells the Python interpreter to treat backslashes as a literal (raw) character
-# Normally, Python uses backslashes as escape characters
 
 columns = [col_name for col_idx, col_name in sorted([(reader.schema.find_column_id(c),c) for c in columns])]
 
