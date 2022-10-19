@@ -14,18 +14,19 @@ columns = [col_name for col_idx, col_name in sorted([(reader.schema.find_column_
 df = pd.DataFrame(reader,columns=columns)
 print(df)
 
-Name = []
-Age = []
-Country = []
+# For 3 col
+C1 = []
+C2 = []
+C3 = []
 
 for i in range(0,len(df)):
-    Name.append(df.loc[i][0])
-    Age.append(df.loc[i][1])
-    Country.append(df.loc[i][2])
+    C1.append(df.loc[i][0])
+    C2.append(df.loc[i][1])
+    C3.append(df.loc[i][2])
 
-Name = np.array(Name)
-Age = np.array(Age)
-Country = np.array(Country)
+C1 = np.array(Name)
+C2 = np.array(Age)
+C3 = np.array(Country)
 
 ###
 # [EXAMPLES] for plotting purposes
