@@ -1,11 +1,11 @@
 package orc
 
 import (
-	"fmt"
 	"os"
 	"reflect"
 	"strconv"
 
+	"github.com/rs/zerolog/log"
 	"github.com/scritchley/orc"
 )
 
@@ -15,21 +15,14 @@ func check(e error) {
 	}
 }
 
-// Converts any type of input to string (assumed)
+// Converts any type of input to string
 func convert_to_string(s any) string {
-	// Debug code
-	//obtype := reflect.TypeOf(s)
-	//fmt.Println("obtype: ", obtype)
-
 	switch s.(type) {
 	case int, float64, string, int64, uint32:
 		b := reflect.TypeOf(s).Name()
-		//fmt.Println("b: ", b)
 		return b
 	case []string, []int, []int64, []float32, []float64:
 		b := reflect.TypeOf(s).Elem().Name()
-		//fmt.Println("s.([]string): ", s.([]string))
-		//fmt.Println("b: ", b)
 		return b
 	}
 	return "err"
@@ -45,7 +38,7 @@ func createFile(filename string) *os.File {
 
 // Gets array size of a given input
 func getLength(s ...interface{}) interface{} {
-	//fmt.Println("s[0]: ", s[0])
+	//log.Print("s[0]: ", s[0])
 	switch s[0].(type) {
 	case int, float64, string, int64, uint32:
 		a := 1
@@ -105,21 +98,24 @@ func writeFile(filename string, s ...interface{}) {
 			switch a[j].(type) {
 			case ([]string):
 				s[j] = a[j].([]string)[i]
-				fmt.Println("s[", j, "]: ", s[j])
+				log.Info().Str("s["+strconv.Itoa(j)+"]", s[j].(string)).Msg("writing data to orc table: ")
 			case ([]int):
 				s[j] = a[j].([]int)[i]
-				fmt.Println("s[", j, "]: ", s[j])
+				log.Info().Str("s["+strconv.Itoa(j)+"]", strconv.Itoa(s[j].(int))).Msg("writing data to orc table: ")
+			case ([]int64):
+				s[j] = a[j].([]int64)[i]
+				log.Info().Str("s["+strconv.Itoa(j)+"]", strconv.FormatInt(s[j].(int64), 10)).Msg("writing data to orc table: ")
 			case ([]float32):
 				s[j] = a[j].([]float32)[i]
-				fmt.Println("s[", j, "]: ", s[j])
+				log.Info().Str("s["+strconv.Itoa(j)+"]", strconv.FormatFloat(s[j].(float64), 'E', -1, 32)).Msg("writing data to orc table: ")
 			case ([]float64):
 				s[j] = a[j].([]float64)[i]
-				fmt.Println("s[", j, "]: ", s[j])
+				log.Info().Str("s["+strconv.Itoa(j)+"]", strconv.FormatFloat(s[j].(float64), 'E', -1, 64)).Msg("writing data to orc table: ")
 			}
 		}
 		err = w.Write(s...)
 		if err != nil {
-			fmt.Println("Error (ORC.Write): ", err)
+			log.Error().Err(err).Msg("Error writing ORC file: ")
 		}
 	}
 
